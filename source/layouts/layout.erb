@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Avid Polymath" %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <img src="/images/profile.jpg" alt="Profile" />
+        <h1 id="greeting">Hello!</h1>
+        <ul id="social-buttons">
+          <li><a href="https://github.com/justinkuepper"><img src="images/github.svg"></a></li>
+          <li><a href="https://twitter.com/jdkuepper"><img src="images/twitter.svg"></a></li>
+          <li><a href="/feed.xml"><img src="images/rss.svg"></a></li>
+        </ul>
+        <p>I'm a full-stack generalist, data geek, and writer that's passionate about solving financial, social, and health problems with software. I write about my experiences building mobile, web, and desktop applications in this blog.</p>
+        <form action="//jdkcommerce.us7.list-manage.com/subscribe/post?u=90d27987dd5e7f299571225fd&amp;id=dc9aeadf82" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_90d27987dd5e7f299571225fd_dc9aeadf82" tabindex="-1" value=""></div>
+          <input type="submit" name="subscribe" id="mc-embedded-subscribe" value="Receive Updates">
+        </form>
+        <div class="response" id="mce-error-response" style="display:none"></div>
+        <div class="response" id="mce-success-response" style="display:none"></div>
+      </div>
+    </header>
+
+    <section id="blog" role="main">
+      <div class="container">
+        <h2>Recent Posts</h2>
+        <%= yield %>
+      </div>
+    </section>
+    <section id="projects">
+      <div class="container">
+        <h2>Current Projects</h2>
+        <div class="project">
+          <h3>Recipe Roulette</h3>
+          <p>An evolving experiment in applying machine learning to meal planning.</p>
+          <p class="tech">Python, Flask, Machine Learning</p>
+          <p><a href="https://github.com/justinkuepper/reciperoulette" class="button">Visit Site</a></p>
+        </div>
+        <div class="project">
+          <h3>Stoic Daily</h3>
+          <p>Daily meditations on your iOS devices from Stoic philosophers.</p>
+          <p class="tech">Swift, Xcode</p>
+          <p><a href="https://github.com/justinkuepper/stoicdaily" class="button">Visit Site</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p class="contact-text">Want to talk? Send an e-mail to:</p>
+        <div class="email-address"><a href="mailto:justin.kuepper@gmail.com">justin.kuepper@gmail.com</a></div>
+        <p class="disclaimer">Copyright &copy; 2017 Justin Kuepper. All Rights Reserved.</p>
+      </div>
+    </section>
+
+    <script src="/javascripts/scripts.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-105103587-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </body>
+</html>
